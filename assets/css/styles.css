@@ -1,13 +1,17 @@
+/* Estilos generales */
 body {
-    text-align: center;
-    margin: 0px;   
-    padding: 0px; 
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center; /* Centra el contenido de texto por defecto */
+    margin: 0px; /* Elimina márgenes del navegador */
+    padding: 0px; /* Elimina el relleno por defecto */
+    
+    /* Fuentes */
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
         -webkit-font-smoothing: antialiased;
         -moz-font-settings: antialiased;
         -moz-osx-font-smoothing: grayscale;
 }
 
+/* Cabecera */
 #header {
     height: 120px;
     width: 100%;
@@ -17,14 +21,16 @@ body {
 }
 
 .center {
-    width: 75%;
+    width: 75%; /* Centra el contenido general */
     margin: 0px auto;
 }
 
 .clearfix {
-    clear: both; 
+    clear: both;
     float: none;
 }
+
+/* Logo */
 #logo {
     width: 30%;
     font-size: 30px;
@@ -38,10 +44,10 @@ body {
     height: 60px;
     margin-top: -9px;
     margin-left: -10px;
-    animation: girar infinite 20s linear;
-
+    animation: girar infinite 20s linear; /* Gira el logo constantemente */
 }
 
+/* Animación del logo girando */
 @keyframes girar {
     from {
         transform: rotate(0deg);
@@ -57,6 +63,7 @@ body {
     float: left;
 }
 
+/* Menú de navegación */
 #menu {
     width: 70%;
     float: right;
@@ -71,29 +78,30 @@ body {
 
 #menu ul li {
     display: inline-block;
-    list-style: none;
+    list-style: none; 
     height: 46px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
 #menu a {
-    text-decoration: none;
+    text-decoration: none; /* Quita el subrayado */
     color: #444;
-    transition: 300ms all;
+    transition: 300ms all; 
 }
 
 #menu a:hover {
-    color: #d61717;
+    color: #d61717; /* Cambia a rojo al pasar el cursor */
 }   
 
+/* Slider (PORTADA) */
 #slider {
     width: 100%;
     background:#61dafb ;
     height: 350px;
     color: white;
 
-
+    /* Fondo en degradado azul */
     text-shadow: 0px 0px 5 px #444;
     background: rgb(2, 0, 36);
     background: linear-gradient(
@@ -106,16 +114,15 @@ body {
 #slider h1 {
     margin-top: 0.2px;
     padding: 0px;
-    padding-top: 140px;
+    padding-top: 140px; /* Centra verticalmente el título */
     text-align: center;
-
 }
 
+/* Botón blanco dentro del slider */
 .btn-white {
     color: rgb(128, 128, 128);
     display: block;
     background: white;
-    
     padding: 10px ;
     width: 100px;
     height: 35px;
@@ -125,8 +132,8 @@ body {
     text-decoration: none;
     text-shadow: none;
     line-height: 35px;
-    box-shadow: 0px 0px 5px #444;
-    margin-top: 40px ;
+    box-shadow: 0px 0px 5px #444; 
+    margin-top: 40px;
     border-radius: 4px;
     transition: 300ms all;
 }
@@ -136,6 +143,7 @@ body {
     color: white;
 }
 
+/* Versión pequeña del slider (para otras páginas) */
 #slider.slider-small {
     height: 150px;
 
@@ -147,6 +155,7 @@ body {
     padding-top: 70px;
 }
 
+/* Estructura principal */
 #content {
     width: 70%; 
     float: left;
@@ -159,6 +168,7 @@ body {
     float: left;
 }
 
+/* Cajas laterales */
 .sidebar-item {
     background: #f7f7f7;
     padding: 15px;
@@ -181,6 +191,7 @@ body {
     margin-top: 10px;
 }
 
+/* Botones generales */
 .btn {
     display: block;
     background: black;
@@ -205,6 +216,7 @@ body {
     background: black;
 }
 
+/* Formularios */
 .mid-form {
     width: 50%;
     margin: 0px auto;
@@ -229,6 +241,7 @@ textarea {
     transition: 300ms all;
 }
 
+/* Efecto al enfocar */
 input[type="text"]:focus 
 textarea:focus {
     box-shadow: 0px 0px 5px #ccc inset;
@@ -249,6 +262,7 @@ textarea {
     float: right;
 }
 
+/* Pie de Página */
 #footer {
     background: #f7f7f7;
     width: 100%;
@@ -263,6 +277,7 @@ textarea {
     padding: 0px;
 }
 
+/* Artículos */
 .article-item {
     width: 100%;
     border-bottom: 1px solid #eeee;
@@ -283,7 +298,7 @@ textarea {
 .article-item .image-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ajusta sin deformar la imagen */
 }
 
 .article-item h2 {
@@ -361,4 +376,107 @@ textarea {
 
 input[type="radio"] {
     margin-right: 5px;
+}
+
+/* RESPONSIVE */
+
+/* Desde la anchura 0px hasta el ancho 1164px de pantalla */
+@media(max-width: 1164px){
+    /* Se ejecutan estos estilos */
+    .center {
+        width: 85%;
+    }
+}
+
+@media(max-width: 1026px){
+    /* Se ejecutan estos estilos */
+    .center {
+        width: 95%;
+
+    }
+
+    #menu ul {
+        width: auto;
+    }
+}
+
+/* Pantallas menores a 918px (vista tablet) */
+@media(max-width: 918px){
+    /* Se ejecutan estos estilos */
+    #logo {
+        float: none;
+        width: 240px;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+
+    #menu,
+    #menu ul {
+        clear: both;
+        float: none;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        line-height: 43px;
+    }
+
+    #content{
+        float: none;
+        width: 100%;
+    }
+
+    #sidebar {
+        float: none;
+        width: 60%;
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+
+    #slider h1 {
+        padding-top: 115px;
+        font-size: 25px;
+    }
+}
+
+/* Pantallas menores a 356px (celular) */
+@media(max-width: 356px){
+    #header {
+        min-height: 130px;
+        overflow: hidden;
+    }
+
+    #menu
+    #menu ul {
+        line-height: 50px;
+    }
+
+    #menu ul li {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+    
+    #slider {
+        height: 180px;
+    }
+
+    #slider h1{
+        font-size: 19px;
+        padding-top: 30px;
+    }
+
+    #slider .btn-white {
+        margin-top: 20px;
+    }
+
+    #slider .slider-small {
+        height: 100px;
+    }
+
+    #slider .slider-small h1 {
+        padding-top: 35px;
+    }
+
+    .mid-form {
+        width: 80%;
+    }
 }
