@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetación del Blog de NSLP</title>
+
+    <!-- ESTILO -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header id="header">
+        <div class="center">
+
+            <!-- LOGO -->
+            <div id="logo">
+                <img src="assets/images/logo.png" class="app-logo" alt="Logotipo">
+                <span id="brand"><strong>BLOG</strong> NSLP</span>
+            </div>
+
+            <!-- MENÚ -->
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="Blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="formulario.html">Formulario</a>
+                    </li>
+                    <li>
+                        <a href="article.html">Página 1</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- LIMPIAR LOS FLOATS -->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="center">
+        <section id="content">
+                <article class="article-item  article-detail">
+                        <div class="image-wrap">
+                            <img src="assets/images/paisaje1.jpg" 
+                            alt="Paisaje" />
+                        </div>
+
+                        <h1 class="subheader">Artículo de Prueba</h1>
+
+                        <span class="date">
+                            Publicado el: 20/06/2024
+                        </span>
+
+                        <p>Este es un artículo de prueba para el blog de NSLP. Aquí puedes encontrar contenido interesante sobre diversos temas relacionados con la programación y el desarrollo web.</p>
+                        <p>La maquetación de este blog ha sido realizada utilizando HTML y CSS, asegurando una experiencia de usuario agradable y accesible.</p>
+                        <p>¡Gracias por leer!</p>
+                    
+                    <div class="clearfix"></div>
+                </article>
+        </section>
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar">
+            <div id="nav-blog" class="sidebar-item">
+                <h3>Podés hacer esto</h3>
+                <a href="#" class="btn btn-sucess">Crear artículo</a>
+            </div>
+
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encontrá el artículo</p>
+
+                <form >
+                    <input type="text" name="search"  />
+                    <input type="submit" name="submit" value="buscar" class="btn" />
+                </form>
+            </div>
+        </aside>
+
+        <!-- LIMPIAR LOS FLOATS -->
+        <div class="clearfix"></div>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="footer">
+        <div class="center">
+            <p>&copy; BLOG NSLP 2024</p>
+        </div>
+    </footer>
+</body>
+</html>
